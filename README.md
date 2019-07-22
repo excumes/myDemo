@@ -1,2 +1,2 @@
 # myDemo
-a JavaScript project
+JavaScript project
