@@ -1,14 +1,3 @@
-// 扩展轮播图插件 sliderImg
-// 插件使用方法:利用父级调用jquery中扩展的插件方法
-// 在应用样式中需要设置父级的固定宽高
-// 同时插件需要传入参数为展示图片的路径
-// 例如：
-// $('#swiper').sliderImg({
-//     image:['./img/1.jpg','./img/2.jpg','./img/3.jpg','./img/4.jpg','./img/5.jpg']
-// })
-
-
-
 
 (function () {
     function Swiper(opt) {

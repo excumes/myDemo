@@ -13,16 +13,12 @@
         var self = this;
         var content = $('<div class="dropCont" style="display:none;"></div>');
         var dropDownCon = $('<div class="dropDownCon"></div>');
-        // 生成结构  
         this.menuList.forEach(function (ele) {
-            // 组
             var menu = $('<div class="nav-menu"></div>');
-            // 标题
             if (ele.title) {
                 var menuTitle = $('<div class="item menu-title"></div>').html(ele.title);
                 menu.append(menuTitle).css('text-align', 'left');
             }
-            // itemList  数据的展示列表
             var itemList = $('<div class="itemList"></div>');
             ele.items.forEach(function (ele2) {
                 var str = '<a href="' + ele2.href + '">' + ele2.name + '</a>';
@@ -33,7 +29,6 @@
         });
         content.append(dropDownCon).appendTo(self.parent);
         this.addCss();
-        // menu排列
         if (this.dir == 'x') {
             $('.nav-menu', this.parent).css({
                 'display': 'inline-block',
@@ -99,4 +94,3 @@
         }
     })
 })();
-// 创建添加结构createDom  添加css样式addCss  鼠标移入移出bindEvent

@@ -1,28 +1,20 @@
-// input插件   创建结构设置样式---->发送请求
 (function () {
     // 初始化处理
     function Init(options) {
-        // 需要把dom结构插入到的位置
         this.parent = options.parent;
-        // jsonp传递时key值  让后端返回带上的属性名
         this.key = options.key || 'callback';
-        // jsonp传递时value值  让后端返回的数据据放在jsonpCallback()里面
         this.jsonpCallback = options.jsonpCallback || '';
-        // 请求数据地址
         this.url = options.url;
-        //  请求数据的方法
         this.type = options.type;
         this.success = options.success;
         this.dataName = options.dataName;
         this.dataType = options.dataType || 'jsonp';
         this.btnColor = options.btnColor || '#eee';
 
-        // 拼接一些其他参数
         this.others = options.others || '';
         this.height = this.parent.height();
         this.width = this.parent.width();
 
-        // 创建dom结构
         this.createDom();
         this.addCss();
         this.bindEvent();
