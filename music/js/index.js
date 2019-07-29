@@ -1,7 +1,7 @@
 var root = window.player;
 var dataList = [];
 var len;
-var audio = root.audioManager; //拿来的是对象
+var audio = root.audioManager; //音频对象
 var control;  //歌曲index 控制对象 
 var timer;
 // 获取数据
@@ -20,6 +20,10 @@ function getDate(url){
             bindEvent();
             bindTouch();
             $('body').trigger('play:change',0); 
+            var music1 = new Audio('../source/song_3.mp3')
+            music1.load();
+            var music1 = new Audio('../source/song_2.mp3')
+            music1.load();
         },
         error:function(){
             console.log("error");
