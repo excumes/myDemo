@@ -1,4 +1,5 @@
 # myDemo
 JavaScript project  
-#### [移动端音乐播放器](https://excumes.github.io/myDemo/music/html/index.html)  
-#### [京东首页例子](https://excumes.github.io/myDemo/JDpage/jdPage/index.html)
+#### [音乐播放器(移动端)](https://excumes.github.io/myDemo/music/html/index.html)  
+#### [京东首页demo](https://excumes.github.io/myDemo/JDpage/jdPage/index.html)  
+#### [vue实现任务列表](https://excumes.github.io/myDemo/vueDemo/demo.html)
