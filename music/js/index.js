@@ -20,10 +20,6 @@ function getDate(url){
             bindEvent();
             bindTouch();
             $('body').trigger('play:change',0); 
-            var music1 = new Audio('../source/song_3.mp3');
-            music1.load();
-            var music2 = new Audio('../source/song_2.mp3');
-            music2.load();
         },
         error:function(){
             console.log("error");
