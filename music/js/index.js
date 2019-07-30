@@ -130,7 +130,7 @@ function retated(deg){
     console.log('retated')
     deg = +deg;
     $('.img-box').css({
-        'transition':'all 1s ease-out'
+        'transition':'none 1s ease-out'
     })
     timer = setInterval(function(){
         deg += 0.15;
