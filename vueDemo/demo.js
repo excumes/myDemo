@@ -38,7 +38,8 @@ let vm = new Vue({
         inputValue: '',
         editing: '',
         beforeEdit: '',
-        visibility: 'all'
+        visibility: 'all',
+        show: 1
     },
     watch: {  //监听  ， list改变就会调用这个函数   
         // 但这种普通的监听 无法监听list里对象的变化，只能监听对象数组个数的变化， 
@@ -89,7 +90,26 @@ let vm = new Vue({
             return this.list.filter(val => !val.checked).length;
         },
         filterList: function () {
-            // console.log(this.visibility)
+            switch(this.visibility){
+                case 'all':
+                    this.show = 1;
+                    break;
+                case 'unfinish' : 
+                    this.show =2;
+                    break;
+                case 'finish' :
+                    this.show = 3;
+                    break;
+                default:
+                    this.show = 1;
+            }
+            // if(this.visibility =='all'){
+            //     this.show = 1;
+            // }else if(this.visibility =="unfinish"){
+            //     this.show = 2;
+            // }else{
+            //     this.show = 3;
+            // };
             return filterCheck[this.visibility] ? filterCheck[this.visibility](this.list) : this.list;
         }
     },

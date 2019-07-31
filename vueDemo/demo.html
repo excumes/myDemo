@@ -26,9 +26,9 @@
         <ul class="task-cont">
             <li>{{ notdo }}个任务未完成</li>
             <li>
-                <a href="#all">所有任务</a>
-                <a href="#unfinish">未完成任务</a>
-                <a href="#finish">完成任务</a>
+                <a href="#all" v-bind:class="{active: show == 1}" @click="show = 1">所有任务</a>
+                <a href="#unfinish" v-bind:class="{active : show == 2}" @click="show = 2">未完成任务</a>
+                <a href="#finish" v-bind:class="{active : show == 3}" @click="show = 3">完成任务</a>
             </li>
         </ul>
         <h3 class="tasks-title">任务列表: <span>(双击文字修改)</span></h3> 

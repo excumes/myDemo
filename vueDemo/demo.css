@@ -58,17 +58,28 @@ ul li{
 }
 .main .task-cont li:nth-child(2) a{
     height: 30px;
-    background-color: #3190e8;
     line-height: 30px;
     padding: 5px 10px 5px 10px;
+    border: 1px solid #dcdfe6;
     margin: 0 5px;
-    color: #fff;
+    color: #409eff;
     border-radius: 5px;
     font-size: 14px;
     transition: all 0.2s linear;
+    background: #ecf5ff;
+    border-color: #b3d8ff;
+
+}
+.main .task-cont li:nth-child(2) a.active{
+    background: #409eff;
+    border-color: #409eff;
+    color: #fff;
 }
 .main .task-cont li:nth-child(2) a:hover{
-    box-shadow: 0 0 10px #808080;
+    box-shadow: 0 0 5px #808080;
+    background: #409eff;
+    border-color: #409eff;
+    color: #fff;
 }
 .tasks-title{
     height: 50px;
