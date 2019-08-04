@@ -126,7 +126,7 @@ let vm = new Vue({
 
 //监听hash值的变化
 function hashchange() {
-    var hash = window.location.hash.slice(1);
+    var hash = window.location.hash.slice(2);
     vm.visibility = hash;
     console.log(vm.visibility);
 }
