@@ -42,6 +42,7 @@ ul li{
     /* border: 1px solid black; */
     outline: none;
     font-size: 16px;
+    text-indent: 10px;
 }
 .main .task-cont{
     width: 500px;

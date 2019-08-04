@@ -31,7 +31,7 @@
                 <a href="#finish" v-bind:class="{active : show == 3}" @click="show = 3">完成任务</a>
             </li>
         </ul>
-        <h3 class="tasks-title">任务列表: <span>(双击文字修改)</span></h3> 
+        <h3 class="tasks-title">任务列表: <span>(双击文字修改,Esc取消编辑)</span></h3> 
         <div class="tasks">
             <span class="no-task-tip" v-show="list.length == 0">未添加任何项目</span>
             <ul class="todo-list">
