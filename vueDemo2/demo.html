@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript" src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <link rel="stylesheet" href="./demo.css">
+    
+
+
+</head>
+
+<body>
+    <div class="page-top" @update="changeid">
+        <div class="page-content">
+            <h2>任务计划列表</h2>
+        </div>
+    </div>
+    <div class="main">
+        <h3 class="big-title">添加任务：</h3>
+        <input type="text" class="tesk-input" v-model="inputValue" v-on:keyup.13="addTodo()">
+        <ul class="task-cont">
+            <li>{{ notdo }}个任务未完成</li>
+            <li>
+                <!-- <a href="javascript:;" @click="test">测试按钮</a> -->
+                <router-link to="/task/all" v-bind:class="{active: show == 'all'}" @click.native="show = 'all'" >所有任务</router-link>
+                <router-link to="/task/unfinish" v-bind:class="{active: show == 'unfinish'}" @click.native="show = 'unfinish'">未完成任务</router-link>
+                <router-link to="/task/finish" v-bind:class="{active: show == 'finish'}" @click.native="show = 'finish'" >完成的任务</router-link>
+                <!-- <a href="#all" v-bind:class="{active: show == 1}" @click="show = 1">所有任务</a>
+                <a href="#unfinish" v-bind:class="{active : show == 2}" @click="show = 2">未完成任务</a>
+                <a href="#finish" v-bind:class="{active : show == 3}" @click="show = 3">完成任务</a> -->
+            </li>
+        </ul>
+        <h3 class="tasks-title">任务列表: <span>(双击文字修改,Esc取消修改)</span></h3> 
+        <router-view></router-view>
+        <!-- <div class="tasks">
+            <span class="no-task-tip" v-show="list.length == 0">未添加任何项目</span>
+            <ul class="todo-list">
+                <li class="list" v-for="item in filterList" :class="{completed:item.checked,editing:editing === item}">
+                    <div class="view">
+                        <input type="checkbox" class="toggle" v-model="item.checked" >
+                        <label @dblclick="edit(item)">{{ item.title }}</label>
+                        <button class="destory" v-on:click="deleteTodo(item)">X</button>
+                    </div>
+                    <input type="text" class="edit" v-focus="editing === item" v-model="item.title" @keyup.enter="edited" @blur="edited" @keyup.esc="cancel(item)">   
+                </li>
+            </ul>
+        </div> -->
+    </div>
+    <script src="./demo.js"></script>
+
+</body>
+
+</html>

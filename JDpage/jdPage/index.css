@@ -41,7 +41,7 @@ body{
     float: left;
     margin:0 5px 0 5px;
     line-height: 30px;
-    
+    color:#999;
 }
 .shortcut a {
     color: #999;
@@ -304,6 +304,7 @@ body{
     left: 50%;
     top: -10px;
     margin-left: -27.5px;
+    box-shadow: 5px 5px 20px rgba(45,45,45,.4);
 }
 .user .user-info .user_avatar_lk img {
     width: 100%;
@@ -347,6 +348,7 @@ body{
 .user .user-info .profit .plus{
     background: #363634;
     color: #e5d790;
+    box-shadow: 5px 5px 20px rgba(45,45,45,.4);
 }
 /* news */
 .content .user .news{
