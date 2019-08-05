@@ -46,10 +46,11 @@
   text-align: center;
   height: 125px;
   color: #fff;
+  font-size: 3vw;
 }
 * body .wrapper .song-info .song-name {
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 6vw;
+  line-height: 6vw;
   margin-bottom: 8px;
 }
 * body .wrapper .pro {
@@ -57,11 +58,11 @@
 }
 * body .wrapper .pro .cur-time,
 * body .wrapper .pro .all-time {
-  width: 60px;
+  width: 16vw;
   height: 40px;
   color: #fff;
   text-align: center;
-  line-height: 40px;
+  line-height: 3vw;
 }
 * body .wrapper .pro .pro-wrap {
   position: relative;
