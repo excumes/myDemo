@@ -63,6 +63,7 @@
   color: #fff;
   text-align: center;
   font-size: 3vw;
+  line-height: 40px;
 }
 * body .wrapper .pro .pro-wrap {
   position: relative;
