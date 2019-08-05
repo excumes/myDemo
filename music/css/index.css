@@ -44,7 +44,7 @@
 * body .wrapper .song-info {
   width: 100%;
   text-align: center;
-  height: 125px;
+  height: 33vw;
   color: #fff;
   font-size: 3vw;
 }
@@ -62,7 +62,7 @@
   height: 40px;
   color: #fff;
   text-align: center;
-  line-height: 3vw;
+  font-size: 3vw;
 }
 * body .wrapper .pro .pro-wrap {
   position: relative;
