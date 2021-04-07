@@ -1,28 +1,94 @@
-*{
-    margin: 0;
-    padding: 0;
-    user-select:none;
+@blue: #409eff;
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
 }
-.tools{
-    position: fixed;
-    left: 0;
-    bottom: 30px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.tools {
+  position: fixed;
+  left: 0;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  > div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     text-align: center;
-    > div{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin: 20px;
-        box-shadow: 0 0 8px rgba(0, 0, 0, .3);
-        text-align: center;
-        line-height: 50px;
-        cursor: pointer;
-        i{
-            font-size: 24px;
-            color: #666;
-        }
+    line-height: 50px;
+    cursor: pointer;
+    &:active{
+       box-shadow: 0 0 20px @blue;
+      i {
+        color: @blue;
+      }
     }
+    &.active {
+      box-shadow: 0 0 20px @blue;
+      i {
+        color: @blue;
+      }
+    }
+    i {
+      font-size: 24px;
+      color: #666;
+    }
+  }
+}
+canvas {
+  border: 1px solid #000;
+}
+.range-wrap {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  margin-top: 75px;
+  input {
+    transform: rotate(-90deg);
+    width: 150px;
+    height: 20px;
+    border-radius: 15px;
+    -webkit-appearance: none;
+    outline: none;
+    position: relative;
+    &::after {
+      display: block;
+      content: "";
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-right: 150px solid #00ccff;
+      border-left-width: 0;
+      position: absolute;
+      left: 0;
+      top: 5px;
+      border-radius: 15px;
+      z-index: 0;
+    }
+  }
+}
+.range-wrap input[type="range"]::-webkit-slider-thumb,
+.range-wrap input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+}
+.range-wrap input[type="range"]::-webkit-slider-runnable-track,
+.range-wrap input[type="range"]::-moz-range-track {
+  height: 10px;
+  border-radius: 10px;
+  box-shadow: none;
+}
+.range-wrap input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  margin-top: -1px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ccff;
+  position: relative;
+  z-index: 999;
 }
